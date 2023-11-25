@@ -131,36 +131,20 @@
 
     <hr>
 
-    
+
     <div class="contact" id="contact">
-        <form onsubmit="sendEmail(); reset(); return false;">
+        <form action="https://formsubmit.co/anishsurve2005@gmail.com" method="POST">
+            <input type="text" name="_honey" style="display: none;">
+            <input type="hidden" name="_captcha" value="false">
             <h2 class="text-center">Contact Us</h2>
-            <input class="form-input" type="text" id="name" placeholder="Your Name">
-            <input class="form-input" type="text" id="phone" placeholder="Your Phone Number">
-            <input class="form-input" type="email" id="email" placeholder="Your Email Address">
-            <textarea class="form-input" id="message" cols="30" rows="10"
+            <input class="form-input" name="name" type="text" id="name" placeholder="Your Name">
+            <input class="form-input" name="phone" type="number" id="phone" placeholder="Your Phone Number">
+            <input class="form-input" name="email" "type="email" id="email" placeholder="Your Email Address">
+            <textarea class="form-input" name="message" id="message" cols="30" rows="10"
                 placeholder="Ellaborate your concerns"></textarea>
             <button class="btn-sm">Submit</button>
         </form>
     </div>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail() {
-            Email.send({
-
-                Host: "smtp.gmail.com",
-                Username: "anishsurve2005@gmail.com",
-                Password: "anuja@1305",
-                To: 'anishsurve2005@gmail.com',
-                From: document.getElementById("email").value,
-                Subject: "New Inquire",
-                Body: "Name : " + document.getElementById("name").value
-                    + "<br> Phone : " + document.getElementById("phone").value
-                    + "<br> Email : " + document.getElementById("email").value
-                    + "<br> Message : " + document.getElementById("message").value
-            }).then(message => alert("Submitted Succesfully"));
-        }
-    </script>
 
 
 
